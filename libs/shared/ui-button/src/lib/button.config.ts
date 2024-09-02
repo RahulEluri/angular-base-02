@@ -3,8 +3,8 @@ export class ButtonConfig {
   isDisabled: boolean | undefined;
   isDropdown: boolean | undefined;
   type: string;
-  icon_right: string | undefined;
-  icon_left: string | undefined;
+  icon_right?: string | undefined;
+  icon_left?: string | undefined;
   classes?: string | string[];
   click?: () => any;
 
