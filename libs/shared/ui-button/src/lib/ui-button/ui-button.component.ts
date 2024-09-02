@@ -12,8 +12,7 @@ export class UiButtonComponent {
   icon_right: string | undefined;
   icon_left: string | undefined;
   type: string = '';
-  toggle?: string
-
+  toggle?: string;
 
   constructor() {}
 
@@ -23,8 +22,9 @@ export class UiButtonComponent {
     this.icon_left = this.config?.icon_left;
     this.type = this.config!.type;
 
-    if(this.config?.isDropdown){
-      this.toggle = 'dropdown'
+    if (this.config?.isDropdown) {
+      this.toggle = 'dropdown';
+      this.config.classes = [...(this.config.classes || []), 'dropdown-toggle'];
     }
   }
 

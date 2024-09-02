@@ -22,11 +22,15 @@ export class AppComponent {
       type: 'submit',
       click: this.OnClick,
       isDropdown: true,
-      classes: ['btn', 'btn-info', 'dropdown-toggle'],
+      classes: ['btn', 'btn-dark'],
     });
   }
 
   OnClick() {
     console.log('Button has clicked');
+  }
+
+  helloworld() {
+    console.log('Hello World');
   }
 }

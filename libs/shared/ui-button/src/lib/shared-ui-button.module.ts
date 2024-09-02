@@ -11,6 +11,10 @@ import { UiButtonListItemComponent } from './ui-button-list-item/ui-button-list-
     UiButtonListComponent,
     UiButtonListItemComponent,
   ],
-  exports: [UiButtonComponent],
+  exports: [
+    UiButtonComponent,
+    UiButtonListComponent,
+    UiButtonListItemComponent,
+  ],
 })
 export class SharedUiButtonModule {}

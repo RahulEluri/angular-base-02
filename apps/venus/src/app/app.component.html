@@ -1,4 +1,19 @@
-<!-- <app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet> -->
-<div class="d-flex justify-content-center align-items-center py-5 b-5">
-  <venus-ui-button [config]="closeButtonConfig"></venus-ui-button>
+<div
+  class="d-flex justify-content-center align-items-center py-5 bg-info bg-opacity-10 border border-info rounded-end"
+>
+  <venus-ui-button [config]="closeButtonConfig">
+    <venus-ui-button-list>
+      <venus-ui-button-list-item
+        [config]="{
+          click: helloworld
+        }"
+        >Hello World</venus-ui-button-list-item
+      >
+      <venus-ui-button-list-item>Namaste India</venus-ui-button-list-item>
+      <venus-ui-button-list-item>Joe Rogan</venus-ui-button-list-item>
+      <hr />
+      <venus-ui-button-list-item>Breaking Bad</venus-ui-button-list-item>
+      <venus-ui-button-list-item>Walter White</venus-ui-button-list-item>
+    </venus-ui-button-list>
+  </venus-ui-button>
 </div>
