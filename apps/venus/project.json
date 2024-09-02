@@ -21,8 +21,12 @@
             "input": "apps/venus/public"
           }
         ],
-        "styles": ["apps/venus/src/styles.css"],
-        "scripts": []
+        "styles": [
+          "apps/venus/src/styles.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+        ],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
       },
       "configurations": {
         "production": {
