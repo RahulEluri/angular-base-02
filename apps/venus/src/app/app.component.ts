@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { SharedUiButtonModule } from 'venus-base-ui-button';
+import { ButtonConfig } from 'libs/shared/ui-button/src/lib/button.config';
 
 @Component({
   standalone: true,
@@ -11,5 +12,21 @@ import { SharedUiButtonModule } from 'venus-base-ui-button';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  closeButtonConfig: ButtonConfig | undefined;
   title = 'venus';
+
+  constructor() {
+    this.closeButtonConfig = new ButtonConfig({
+      label: 'Profile',
+      isDisabled: false,
+      type: 'submit',
+      click: this.OnClick,
+      isDropdown: true,
+      classes: ['btn', 'btn-info', 'dropdown-toggle'],
+    });
+  }
+
+  OnClick() {
+    console.log('Button has clicked');
+  }
 }

@@ -1,1 +1,21 @@
-<p>ui-button works!</p>
+<button
+  [disabled]="config?.isDisabled"
+  [type]="config?.type"
+  (click)="click()"
+  [ngClass]="config?.classes"
+  [attr.data-bs-toggle]="toggle"
+>
+  <ng-container *ngIf="icon_left" class="mx-4">
+    <i [class]="icon_left"></i>
+  </ng-container>
+  {{ label }}
+  <ng-container *ngIf="icon_right" class="mx-4">
+    <i [class]="icon_right"></i>
+  </ng-container>
+</button>
+
+<ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Action</a></li>
+  <li><a class="dropdown-item" href="#">Another action</a></li>
+  <li><a class="dropdown-item" href="#">Something else here</a></li>
+</ul>
