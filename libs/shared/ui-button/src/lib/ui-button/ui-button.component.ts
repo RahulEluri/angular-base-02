@@ -22,7 +22,7 @@ export class UiButtonComponent {
     this.icon_left = this.config?.icon_left;
     this.type = this.config!.type;
 
-    if (this.config?.isDropdown) {
+    if (this.config?.isDropdown && !this.config?.isSplit) {
       this.toggle = 'dropdown';
       this.config.classes = [...(this.config.classes || []), 'dropdown-toggle'];
     }

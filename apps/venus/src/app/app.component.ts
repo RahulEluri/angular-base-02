@@ -12,16 +12,19 @@ import { ButtonConfig } from 'libs/shared/ui-button/src/lib/button.config';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  closeButtonConfig: ButtonConfig | undefined;
+  ButtonConfig: ButtonConfig | undefined;
+
   title = 'venus';
 
   constructor() {
-    this.closeButtonConfig = new ButtonConfig({
+    this.ButtonConfig = new ButtonConfig({
       label: 'Profile',
       isDisabled: false,
-      type: 'submit',
+      icon_left: 'fa fa-user',
+      type: 'button',
       click: this.OnClick,
       isDropdown: true,
+      isSplit: false,
       classes: ['btn', 'btn-dark'],
     });
   }

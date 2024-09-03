@@ -1,17 +1,30 @@
-<button
-  [disabled]="config?.isDisabled"
-  [type]="config?.type"
-  (click)="click()"
-  [ngClass]="config?.classes"
-  [attr.data-bs-toggle]="toggle"
->
-  <ng-container *ngIf="icon_left" class="mx-4">
-    <i [class]="icon_left"></i>
-  </ng-container>
-  {{ label }}
-  <ng-container *ngIf="icon_right" class="mx-4">
-    <i [class]="icon_right"></i>
-  </ng-container>
-</button>
+<div class="btn-group">
+  <button
+    [disabled]="config?.isDisabled"
+    [type]="config?.type"
+    (click)="click()"
+    [class]="config?.classes"
+    [attr.data-bs-toggle]="toggle"
+  >
+    <ng-container *ngIf="icon_left">
+      <i [class]="icon_left" class="me-2"></i>
+    </ng-container>
+    {{ label }}
+    <ng-container *ngIf="icon_right">
+      <i [class]="icon_right" class="ms-2"></i>
+    </ng-container>
+  </button>
 
-<ng-content></ng-content>
+  <ng-container *ngIf="config?.isDropdown && config?.isSplit"
+    ><button
+      type="button"
+      [class]="config?.classes"
+      class="dropdown-toggle dropdown-toggle-split"
+      data-bs-toggle="dropdown"
+    >
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+  </ng-container>
+
+  <ng-content></ng-content>
+</div>

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "component-base-ui-toaster": ["libs/shared/ui-toaster/src/index.ts"],
       "venus-base-ui-button": ["libs/shared/ui-button/src/index.ts"]
     }
   },
